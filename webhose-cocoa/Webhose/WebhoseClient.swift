@@ -8,7 +8,8 @@ class WebhoseClient {
     }
 
     func search(query: String, callback: (WebhoseResponse) -> Void) {
-        service.get("https://webhose.io/") { data in
+        let endpoint = WebhoseEndpoint.buildWithKey(key, AndQuery: query)
+        service.get(endpoint) { data in
             callback(WebhoseResponse(data: data))
         }
     }
