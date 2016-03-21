@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0DB4C5145813955D16306008 /* Pods_WebhoseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928525B01290C467E738C929 /* Pods_WebhoseTests.framework */; };
 		EA942B981CA08FB200AE354F /* OHHTTPStubsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA942B971CA08FB200AE354F /* OHHTTPStubsSwift.swift */; };
+		EA942B9B1CA0925900AE354F /* Response.json in Resources */ = {isa = PBXBuildFile; fileRef = EA942B9A1CA0925900AE354F /* Response.json */; };
 		EAA76D511CA0833A00AC97C6 /* Webhose.h in Headers */ = {isa = PBXBuildFile; fileRef = EAA76D501CA0833A00AC97C6 /* Webhose.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAA76D581CA0833A00AC97C6 /* Webhose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA76D4D1CA0833A00AC97C6 /* Webhose.framework */; };
 		EAA76D5D1CA0833A00AC97C6 /* WebhoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA76D5C1CA0833A00AC97C6 /* WebhoseTests.swift */; };
@@ -32,6 +33,7 @@
 		928525B01290C467E738C929 /* Pods_WebhoseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebhoseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D000CC38797CF2B5AF31F464 /* Pods-WebhoseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebhoseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebhoseTests/Pods-WebhoseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA942B971CA08FB200AE354F /* OHHTTPStubsSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHHTTPStubsSwift.swift; sourceTree = "<group>"; };
+		EA942B9A1CA0925900AE354F /* Response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Response.json; sourceTree = "<group>"; };
 		EAA76D4D1CA0833A00AC97C6 /* Webhose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Webhose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA76D501CA0833A00AC97C6 /* Webhose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Webhose.h; sourceTree = "<group>"; };
 		EAA76D521CA0833A00AC97C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				EAA76D5C1CA0833A00AC97C6 /* WebhoseTests.swift */,
+				EA942B9A1CA0925900AE354F /* Response.json */,
 				EA942B991CA08FBA00AE354F /* OHHTTPStubs */,
 				EAA76D6E1CA087BE00AC97C6 /* Supporting Files */,
 			);
@@ -247,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA942B9B1CA0925900AE354F /* Response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

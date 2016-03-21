@@ -179,3 +179,4 @@ public func && (lhs: OHHTTPStubsTestBlock, rhs: OHHTTPStubsTestBlock) -> OHHTTPS
 public prefix func ! (expr: OHHTTPStubsTestBlock) -> OHHTTPStubsTestBlock {
     return { req in !expr(req) }
 }
+// swiftlint:enable line_length
