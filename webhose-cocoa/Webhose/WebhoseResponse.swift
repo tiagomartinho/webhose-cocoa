@@ -1,3 +1,3 @@
 struct WebhoseResponse {
-    let posts: [WebhosePost]
+    let totalResults: Int
 }

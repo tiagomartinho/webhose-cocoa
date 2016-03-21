@@ -84,8 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-WebhoseTests/Alamofire.framework"
+  install_framework "Pods-WebhoseTests/Nimble.framework"
   install_framework "Pods-WebhoseTests/OHHTTPStubs.framework"
+  install_framework "Pods-WebhoseTests/Quick.framework"
+  install_framework "Pods-WebhoseTests/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-WebhoseTests/Alamofire.framework"
+  install_framework "Pods-WebhoseTests/Nimble.framework"
   install_framework "Pods-WebhoseTests/OHHTTPStubs.framework"
+  install_framework "Pods-WebhoseTests/Quick.framework"
+  install_framework "Pods-WebhoseTests/SwiftyJSON.framework"
 fi
