@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB4C5145813955D16306008 /* Pods_WebhoseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928525B01290C467E738C929 /* Pods_WebhoseTests.framework */; };
+		EA942B981CA08FB200AE354F /* OHHTTPStubsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA942B971CA08FB200AE354F /* OHHTTPStubsSwift.swift */; };
 		EAA76D511CA0833A00AC97C6 /* Webhose.h in Headers */ = {isa = PBXBuildFile; fileRef = EAA76D501CA0833A00AC97C6 /* Webhose.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAA76D581CA0833A00AC97C6 /* Webhose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA76D4D1CA0833A00AC97C6 /* Webhose.framework */; };
 		EAA76D5D1CA0833A00AC97C6 /* WebhoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA76D5C1CA0833A00AC97C6 /* WebhoseTests.swift */; };
@@ -26,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FE1806A3E4CEB2ECCDF8023 /* Pods-WebhoseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebhoseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebhoseTests/Pods-WebhoseTests.release.xcconfig"; sourceTree = "<group>"; };
+		928525B01290C467E738C929 /* Pods_WebhoseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebhoseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D000CC38797CF2B5AF31F464 /* Pods-WebhoseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebhoseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebhoseTests/Pods-WebhoseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA942B971CA08FB200AE354F /* OHHTTPStubsSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHHTTPStubsSwift.swift; sourceTree = "<group>"; };
 		EAA76D4D1CA0833A00AC97C6 /* Webhose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Webhose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA76D501CA0833A00AC97C6 /* Webhose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Webhose.h; sourceTree = "<group>"; };
 		EAA76D521CA0833A00AC97C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,18 +56,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAA76D581CA0833A00AC97C6 /* Webhose.framework in Frameworks */,
+				0DB4C5145813955D16306008 /* Pods_WebhoseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1492CBDB74ACF08CD34F4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D000CC38797CF2B5AF31F464 /* Pods-WebhoseTests.debug.xcconfig */,
+				1FE1806A3E4CEB2ECCDF8023 /* Pods-WebhoseTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA942B991CA08FBA00AE354F /* OHHTTPStubs */ = {
+			isa = PBXGroup;
+			children = (
+				EA942B971CA08FB200AE354F /* OHHTTPStubsSwift.swift */,
+			);
+			name = OHHTTPStubs;
+			sourceTree = "<group>";
+		};
 		EAA76D411CA082DD00AC97C6 = {
 			isa = PBXGroup;
 			children = (
 				EAA76D4F1CA0833A00AC97C6 /* Webhose */,
 				EAA76D5B1CA0833A00AC97C6 /* WebhoseTests */,
 				EAA76D4E1CA0833A00AC97C6 /* Products */,
+				2A1492CBDB74ACF08CD34F4D /* Pods */,
+				FE4CA6A2D5AA82D05F4CFF70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				EAA76D5C1CA0833A00AC97C6 /* WebhoseTests.swift */,
+				EA942B991CA08FBA00AE354F /* OHHTTPStubs */,
 				EAA76D6E1CA087BE00AC97C6 /* Supporting Files */,
 			);
 			path = WebhoseTests;
@@ -109,6 +136,14 @@
 				EAA76D5E1CA0833A00AC97C6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE4CA6A2D5AA82D05F4CFF70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				928525B01290C467E738C929 /* Pods_WebhoseTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAA76D621CA0833A00AC97C6 /* Build configuration list for PBXNativeTarget "WebhoseTests" */;
 			buildPhases = (
+				C6CD77D687B2E4D30F82D860 /* Check Pods Manifest.lock */,
 				EAA76D531CA0833A00AC97C6 /* Sources */,
 				EAA76D541CA0833A00AC97C6 /* Frameworks */,
 				EAA76D551CA0833A00AC97C6 /* Resources */,
+				65A2A8274D72B12A25D55664 /* Embed Pods Frameworks */,
+				BF5069693150A51CBC4B8992 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +253,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		65A2A8274D72B12A25D55664 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebhoseTests/Pods-WebhoseTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF5069693150A51CBC4B8992 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebhoseTests/Pods-WebhoseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6CD77D687B2E4D30F82D860 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		EAA76D661CA084DC00AC97C6 /* Run Swiftlint Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA942B981CA08FB200AE354F /* OHHTTPStubsSwift.swift in Sources */,
 				EAA76D5D1CA0833A00AC97C6 /* WebhoseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +468,7 @@
 		};
 		EAA76D631CA0833A00AC97C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D000CC38797CF2B5AF31F464 /* Pods-WebhoseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -432,6 +517,7 @@
 		};
 		EAA76D641CA0833A00AC97C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FE1806A3E4CEB2ECCDF8023 /* Pods-WebhoseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -490,6 +576,7 @@
 				EAA76D611CA0833A00AC97C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAA76D621CA0833A00AC97C6 /* Build configuration list for PBXNativeTarget "WebhoseTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +585,7 @@
 				EAA76D641CA0833A00AC97C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
