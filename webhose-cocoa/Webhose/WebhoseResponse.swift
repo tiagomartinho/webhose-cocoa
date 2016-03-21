@@ -3,4 +3,5 @@ struct WebhoseResponse {
     let next: String
     let requestsLeft: Int
     let moreResultsAvailable: Int
+    let posts: [WebhosePost]
 }

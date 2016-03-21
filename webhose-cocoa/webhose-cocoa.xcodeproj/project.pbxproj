@@ -12,6 +12,7 @@
 		EA7B627D1CA098870059DA9C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B627C1CA098870059DA9C /* Service.swift */; };
 		EA7B627F1CA09A320059DA9C /* WebhoseResponse+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B627E1CA09A320059DA9C /* WebhoseResponse+SwiftyJSON.swift */; };
 		EA7B62811CA09C6F0059DA9C /* WebhoseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B62801CA09C6F0059DA9C /* WebhoseEndpoint.swift */; };
+		EA7B62831CA0A1C30059DA9C /* WebhosePost+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B62821CA0A1C30059DA9C /* WebhosePost+SwiftyJSON.swift */; };
 		EA942B981CA08FB200AE354F /* OHHTTPStubsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA942B971CA08FB200AE354F /* OHHTTPStubsSwift.swift */; };
 		EA942B9B1CA0925900AE354F /* Response.json in Resources */ = {isa = PBXBuildFile; fileRef = EA942B9A1CA0925900AE354F /* Response.json */; };
 		EA942B9D1CA093EA00AE354F /* AlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA942B9C1CA093EA00AE354F /* AlamofireService.swift */; };
@@ -43,6 +44,7 @@
 		EA7B627C1CA098870059DA9C /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		EA7B627E1CA09A320059DA9C /* WebhoseResponse+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebhoseResponse+SwiftyJSON.swift"; sourceTree = "<group>"; };
 		EA7B62801CA09C6F0059DA9C /* WebhoseEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebhoseEndpoint.swift; sourceTree = "<group>"; };
+		EA7B62821CA0A1C30059DA9C /* WebhosePost+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebhosePost+SwiftyJSON.swift"; sourceTree = "<group>"; };
 		EA942B971CA08FB200AE354F /* OHHTTPStubsSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHHTTPStubsSwift.swift; sourceTree = "<group>"; };
 		EA942B9A1CA0925900AE354F /* Response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Response.json; sourceTree = "<group>"; };
 		EA942B9C1CA093EA00AE354F /* AlamofireService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireService.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				EAA76D691CA0868A00AC97C6 /* WebhoseResponse.swift */,
 				EA7B627E1CA09A320059DA9C /* WebhoseResponse+SwiftyJSON.swift */,
 				EAA76D6B1CA086FC00AC97C6 /* WebhosePost.swift */,
+				EA7B62821CA0A1C30059DA9C /* WebhosePost+SwiftyJSON.swift */,
 				EA7B62801CA09C6F0059DA9C /* WebhoseEndpoint.swift */,
 				EA7B627C1CA098870059DA9C /* Service.swift */,
 				EA942B9C1CA093EA00AE354F /* AlamofireService.swift */,
@@ -380,6 +383,7 @@
 				EAA76D6A1CA0868A00AC97C6 /* WebhoseResponse.swift in Sources */,
 				EA7B627F1CA09A320059DA9C /* WebhoseResponse+SwiftyJSON.swift in Sources */,
 				EA7B627D1CA098870059DA9C /* Service.swift in Sources */,
+				EA7B62831CA0A1C30059DA9C /* WebhosePost+SwiftyJSON.swift in Sources */,
 				EA942B9D1CA093EA00AE354F /* AlamofireService.swift in Sources */,
 				EAA76D681CA085F300AC97C6 /* WebhoseClient.swift in Sources */,
 			);
