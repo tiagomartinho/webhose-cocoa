@@ -43,15 +43,36 @@ class WebhosePostSpec: QuickSpec {
                     let expectedUUID = "7ac79ae99e3e9aa8acce5ce36ae34ed3443fc3d0"
                     expect(post?.uuid).toEventually(equal(expectedUUID))
                 }
-                it("has an uuid") {
+                it("has an url") {
                     var post: WebhosePost?
                     client.search(self.aQuery) { response in
                         post = response.posts.first
                     }
-                    let expectedURL = "http://omgili.com/r/"
+                    let expectedURL = NSURL(string: "http://omgili.com/r/")!
                     expect(post?.url).toEventually(equal(expectedURL))
+                }
+                it("has a publication date") {
+                    var post: WebhosePost?
+                    client.search(self.aQuery) { response in
+                        post = response.posts.first
+                    }
+                    let expectedDate = WebhosePostSpec.buildExpectedDate()
+                    expect(post?.published).toEventually(equal(expectedDate))
                 }
             }
         }
+    }
+
+    static func buildExpectedDate() -> NSDate {
+        let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
+        let components = NSDateComponents()
+        components.year = 2016
+        components.month = 3
+        components.day = 18
+        components.hour = 19
+        components.minute = 31
+        components.second = 0
+        components.timeZone = NSTimeZone(forSecondsFromGMT: 0)
+        return calendar!.dateFromComponents(components)!
     }
 }
