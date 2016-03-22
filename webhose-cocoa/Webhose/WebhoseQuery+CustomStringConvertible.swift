@@ -1,5 +1,18 @@
 extension WebhoseQuery: CustomStringConvertible {
     var description: String {
-        return ""
+        var description = ""
+        if let terms = allTerms {
+            if terms.count > 0 {
+                description += "("
+                for (index, term) in terms.enumerate() {
+                    description += term
+                    if index + 1 != terms.count {
+                        description += " AND "
+                    }
+                }
+                description += ")"
+            }
+        }
+        return description
     }
 }

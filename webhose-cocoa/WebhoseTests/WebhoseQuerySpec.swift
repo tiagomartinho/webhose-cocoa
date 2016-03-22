@@ -7,12 +7,15 @@ class WebhoseQuerySpec: QuickSpec {
     let aKey = "aKey"
     let aQuery = "aQuery"
 
-    func DISABLE_spec() {
+    override func spec() {
         describe("the Webhose Query") {
             context("when the query is built") {
                 it("has all these words") {
                     let expectedQuery = "(All AND These AND Words)"
-                    let query = WebhoseQuery()
+                    let builder = WebhoseQueryBuilder { builder in
+                        builder.allTerms = ["All", "These", "Words"]
+                    }
+                    let query = WebhoseQuery(builder: builder)
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has exact word") {

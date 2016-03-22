@@ -31,6 +31,7 @@
 		EABD80C71CA1E9DB0049534C /* WebhoseQuerySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABD80C61CA1E9DB0049534C /* WebhoseQuerySpec.swift */; };
 		EABD80C91CA1EA090049534C /* WebhoseQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABD80C81CA1EA090049534C /* WebhoseQuery.swift */; };
 		EABD80CB1CA1F4EC0049534C /* WebhoseQuery+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABD80CA1CA1F4EC0049534C /* WebhoseQuery+CustomStringConvertible.swift */; };
+		EABD80CE1CA1F63C0049534C /* WebhoseQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABD80CD1CA1F63C0049534C /* WebhoseQueryBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		EABD80C61CA1E9DB0049534C /* WebhoseQuerySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebhoseQuerySpec.swift; sourceTree = "<group>"; };
 		EABD80C81CA1EA090049534C /* WebhoseQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebhoseQuery.swift; sourceTree = "<group>"; };
 		EABD80CA1CA1F4EC0049534C /* WebhoseQuery+CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebhoseQuery+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		EABD80CD1CA1F63C0049534C /* WebhoseQueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebhoseQueryBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			children = (
 				EABD80C81CA1EA090049534C /* WebhoseQuery.swift */,
 				EABD80CA1CA1F4EC0049534C /* WebhoseQuery+CustomStringConvertible.swift */,
+				EABD80CD1CA1F63C0049534C /* WebhoseQueryBuilder.swift */,
 			);
 			name = WebhoseQuery;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				EA7B62831CA0A1C30059DA9C /* WebhosePost+SwiftyJSON.swift in Sources */,
 				EA16E6C81CA1D1EF00CCB362 /* NSDateExtension.swift in Sources */,
 				EABD80CB1CA1F4EC0049534C /* WebhoseQuery+CustomStringConvertible.swift in Sources */,
+				EABD80CE1CA1F63C0049534C /* WebhoseQueryBuilder.swift in Sources */,
 				EA942B9D1CA093EA00AE354F /* AlamofireService.swift in Sources */,
 				EABD80C21CA1DA320049534C /* WebhoseThread+SwiftyJSON.swift in Sources */,
 				EAA76D681CA085F300AC97C6 /* WebhoseClient.swift in Sources */,
