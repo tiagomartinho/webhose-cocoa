@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0DB4C5145813955D16306008 /* Pods_WebhoseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928525B01290C467E738C929 /* Pods_WebhoseTests.framework */; };
 		B9568A4C13363BA128B54A1A /* Pods_Webhose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB69270EB7278A52A4AAD91 /* Pods_Webhose.framework */; };
+		EA16E6C41CA1C5CC00CCB362 /* WebhosePostSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA16E6C31CA1C5CC00CCB362 /* WebhosePostSpec.swift */; };
+		EA16E6C61CA1C66800CCB362 /* WebhoseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA16E6C51CA1C66800CCB362 /* WebhoseStub.swift */; };
 		EA7B627D1CA098870059DA9C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B627C1CA098870059DA9C /* Service.swift */; };
 		EA7B627F1CA09A320059DA9C /* WebhoseResponse+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B627E1CA09A320059DA9C /* WebhoseResponse+SwiftyJSON.swift */; };
 		EA7B62811CA09C6F0059DA9C /* WebhoseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B62801CA09C6F0059DA9C /* WebhoseEndpoint.swift */; };
@@ -41,6 +43,8 @@
 		928525B01290C467E738C929 /* Pods_WebhoseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebhoseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D000CC38797CF2B5AF31F464 /* Pods-WebhoseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebhoseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebhoseTests/Pods-WebhoseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1C529EFF1F42B17E6C591C7 /* Pods-Webhose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webhose.release.xcconfig"; path = "Pods/Target Support Files/Pods-Webhose/Pods-Webhose.release.xcconfig"; sourceTree = "<group>"; };
+		EA16E6C31CA1C5CC00CCB362 /* WebhosePostSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebhosePostSpec.swift; sourceTree = "<group>"; };
+		EA16E6C51CA1C66800CCB362 /* WebhoseStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebhoseStub.swift; sourceTree = "<group>"; };
 		EA7B627C1CA098870059DA9C /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		EA7B627E1CA09A320059DA9C /* WebhoseResponse+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebhoseResponse+SwiftyJSON.swift"; sourceTree = "<group>"; };
 		EA7B62801CA09C6F0059DA9C /* WebhoseEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebhoseEndpoint.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				EA942B971CA08FB200AE354F /* OHHTTPStubsSwift.swift */,
+				EA16E6C51CA1C66800CCB362 /* WebhoseStub.swift */,
+				EA942B9A1CA0925900AE354F /* Response.json */,
 			);
 			name = OHHTTPStubs;
 			sourceTree = "<group>";
@@ -139,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				EAA76D5C1CA0833A00AC97C6 /* WebhoseReponseSpec.swift */,
-				EA942B9A1CA0925900AE354F /* Response.json */,
+				EA16E6C31CA1C5CC00CCB362 /* WebhosePostSpec.swift */,
 				EA942B991CA08FBA00AE354F /* OHHTTPStubs */,
 				EAA76D6E1CA087BE00AC97C6 /* Supporting Files */,
 			);
@@ -393,8 +399,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA16E6C41CA1C5CC00CCB362 /* WebhosePostSpec.swift in Sources */,
 				EA942B981CA08FB200AE354F /* OHHTTPStubsSwift.swift in Sources */,
 				EAA76D5D1CA0833A00AC97C6 /* WebhoseReponseSpec.swift in Sources */,
+				EA16E6C61CA1C66800CCB362 /* WebhoseStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

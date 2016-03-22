@@ -1,61 +1,61 @@
 @testable import Webhose
 import Quick
 import Nimble
-import OHHTTPStubs
 
 class WebhoseReponseSpec: QuickSpec {
+
     let aKey = "aKey"
     let aQuery = "aQuery"
-    let webhose = "webhose.io"
-    let expectedNext = "/search?token=1832ce648d&format=json&ts=1458339113634&q=ipod"
-    var totalResults: Int?
-    var next: String?
-    var requestsLeft: Int?
-    var moreResultsAvailable: Int?
 
     override func spec() {
         describe("the Webhose Client") {
+            let client = WebhoseClient(key: self.aKey)
+
             context("when the response is incorrect") {
                 beforeEach {
-                    stub(isHost(self.webhose)) { _ in
-                        return fixture("", status: 500,
-                            headers: ["Content-Type":"application/json"])
-                    }
+                    WebhoseStub.stubIncorrectResponse()
                 }
-                it("has empty post list") {
-                    let client = WebhoseClient(key: self.aKey)
+                it("does not have totalResults") {
+                    var totalResults: Int?
                     client.search(self.aQuery) { response in
-                        self.totalResults = response.totalResults
-                        self.next = response.next
-                        self.requestsLeft = response.requestsLeft
-                        self.moreResultsAvailable = response.moreResultsAvailable
+                        totalResults = response.totalResults
                     }
-                    expect(self.totalResults).toEventually(equal(0))
-                    expect(self.next).toEventually(equal(""))
-                    expect(self.requestsLeft).toEventually(equal(0))
-                    expect(self.moreResultsAvailable).toEventually(equal(0))
+                    expect(totalResults).toEventually(equal(0))
                 }
             }
 
             context("when the response is correct") {
                 beforeEach {
-                    stub(isHost(self.webhose)) { _ in
-                        let stubPath = OHPathForFile("Response.json", self.dynamicType)
-                        return fixture(stubPath!, headers: ["Content-Type":"application/json"])
-                    }
+                    WebhoseStub.stubCorrectResponse()
                 }
-                it("has not empty items list") {
-                    let client = WebhoseClient(key: self.aKey)
+                it("has total results") {
+                    var totalResults: Int?
                     client.search(self.aQuery) { response in
-                        self.totalResults = response.totalResults
-                        self.next = response.next
-                        self.requestsLeft = response.requestsLeft
-                        self.moreResultsAvailable = response.moreResultsAvailable
+                        totalResults = response.totalResults
                     }
-                    expect(self.totalResults).toEventually(equal(2))
-                    expect(self.next).toEventually(equal(self.expectedNext))
-                    expect(self.requestsLeft).toEventually(equal(998))
-                    expect(self.moreResultsAvailable).toEventually(equal(5113))
+                    expect(totalResults).toEventually(equal(2))
+                }
+                it("has next search url") {
+                    var next: String?
+                    client.search(self.aQuery) { response in
+                        next = response.next
+                    }
+                    let expectedNext = "/search?token=1&format=json&ts=1458339113634&q=ipod"
+                    expect(next).toEventually(equal(expectedNext))
+                }
+                it("has number of requests left") {
+                    var requestsLeft: Int?
+                    client.search(self.aQuery) { response in
+                        requestsLeft = response.requestsLeft
+                    }
+                    expect(requestsLeft).toEventually(equal(998))
+                }
+                it("has number of more results available") {
+                    var moreResultsAvailable: Int?
+                    client.search(self.aQuery) { response in
+                        moreResultsAvailable = response.moreResultsAvailable
+                    }
+                    expect(moreResultsAvailable).toEventually(equal(5113))
                 }
             }
         }
