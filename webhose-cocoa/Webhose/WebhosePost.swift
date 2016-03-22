@@ -1,10 +1,10 @@
 struct WebhosePost {
     let uuid: String
     let url: NSURL
-    let orderInThread: Int
-    let author: String
     let published: NSDate
     let title: String
+    let orderInThread: Int
+    let author: String
     let text: String
     let highlightText: String
     let highlightTitle: String
@@ -14,4 +14,5 @@ struct WebhosePost {
     let locations: [String]
     let organizations: [String]
     let crawled: NSDate
+    let thread: WebhoseThread
 }

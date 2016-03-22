@@ -4,10 +4,10 @@ extension WebhosePost {
     init(json: JSON) {
         self.uuid = json["uuid"].stringValue
         self.url = NSURL(string: json["url"].stringValue) ?? NSURL()
-        self.orderInThread = json["ord_in_thread"].intValue
-        self.author = json["author"].stringValue
         self.published = NSDate.dateFromString(json["published"].stringValue)
         self.title = json["title"].stringValue
+        self.orderInThread = json["ord_in_thread"].intValue
+        self.author = json["author"].stringValue
         self.text = json["text"].stringValue
         self.highlightText = json["highlightText"].stringValue
         self.highlightTitle = json["highlightTitle"].stringValue
@@ -17,6 +17,7 @@ extension WebhosePost {
         self.locations = json["locations"].arrayValue.map { $0.stringValue }
         self.organizations = json["organizations"].arrayValue.map { $0.stringValue }
         self.crawled = NSDate.dateFromString(json["crawled"].stringValue)
+        self.thread = WebhoseThread(json: json["thread"])
     }
 }
 
