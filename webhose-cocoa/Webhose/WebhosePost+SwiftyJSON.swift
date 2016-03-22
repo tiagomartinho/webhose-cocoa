@@ -14,8 +14,8 @@ extension WebhosePost {
         self.language = json["language"].stringValue
         self.externalLinks = json["external_links"].arrayValue.map { $0.stringValue }
         self.persons = json["persons"].arrayValue.map { $0.stringValue }
-        self.locations = json["persons"].arrayValue.map { $0.stringValue }
-        self.organizations = json["persons"].arrayValue.map { $0.stringValue }
+        self.locations = json["locations"].arrayValue.map { $0.stringValue }
+        self.organizations = json["organizations"].arrayValue.map { $0.stringValue }
         self.crawled = NSDate.dateFromString(json["crawled"].stringValue)
     }
 }

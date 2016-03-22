@@ -130,14 +130,9 @@
 		EAA76D4F1CA0833A00AC97C6 /* Webhose */ = {
 			isa = PBXGroup;
 			children = (
-				EAA76D671CA085F300AC97C6 /* WebhoseClient.swift */,
-				EAA76D691CA0868A00AC97C6 /* WebhoseResponse.swift */,
-				EA7B627E1CA09A320059DA9C /* WebhoseResponse+SwiftyJSON.swift */,
-				EAA76D6B1CA086FC00AC97C6 /* WebhosePost.swift */,
-				EA7B62821CA0A1C30059DA9C /* WebhosePost+SwiftyJSON.swift */,
-				EA7B62801CA09C6F0059DA9C /* WebhoseEndpoint.swift */,
-				EA7B627C1CA098870059DA9C /* Service.swift */,
-				EA942B9C1CA093EA00AE354F /* AlamofireService.swift */,
+				EABD80BE1CA1D7E20049534C /* WebhoseClient */,
+				EABD80BC1CA1D7BB0049534C /* WebhoseResponse */,
+				EABD80BD1CA1D7C70049534C /* WebhosePost */,
 				EA16E6C71CA1D1EF00CCB362 /* NSDateExtension.swift */,
 				EAA76D6D1CA087AF00AC97C6 /* Supporting Files */,
 			);
@@ -170,6 +165,35 @@
 				EAA76D5E1CA0833A00AC97C6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EABD80BC1CA1D7BB0049534C /* WebhoseResponse */ = {
+			isa = PBXGroup;
+			children = (
+				EAA76D691CA0868A00AC97C6 /* WebhoseResponse.swift */,
+				EA7B627E1CA09A320059DA9C /* WebhoseResponse+SwiftyJSON.swift */,
+			);
+			name = WebhoseResponse;
+			sourceTree = "<group>";
+		};
+		EABD80BD1CA1D7C70049534C /* WebhosePost */ = {
+			isa = PBXGroup;
+			children = (
+				EAA76D6B1CA086FC00AC97C6 /* WebhosePost.swift */,
+				EA7B62821CA0A1C30059DA9C /* WebhosePost+SwiftyJSON.swift */,
+			);
+			name = WebhosePost;
+			sourceTree = "<group>";
+		};
+		EABD80BE1CA1D7E20049534C /* WebhoseClient */ = {
+			isa = PBXGroup;
+			children = (
+				EAA76D671CA085F300AC97C6 /* WebhoseClient.swift */,
+				EA7B62801CA09C6F0059DA9C /* WebhoseEndpoint.swift */,
+				EA7B627C1CA098870059DA9C /* Service.swift */,
+				EA942B9C1CA093EA00AE354F /* AlamofireService.swift */,
+			);
+			name = WebhoseClient;
 			sourceTree = "<group>";
 		};
 		FE4CA6A2D5AA82D05F4CFF70 /* Frameworks */ = {
