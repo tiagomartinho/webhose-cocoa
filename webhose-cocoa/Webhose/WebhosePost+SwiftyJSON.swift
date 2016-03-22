@@ -3,6 +3,7 @@ import SwiftyJSON
 extension WebhosePost {
     init(json: JSON) {
         self.uuid = json["uuid"].string ?? ""
+        self.url = json["url"].string ?? ""
     }
 }
 

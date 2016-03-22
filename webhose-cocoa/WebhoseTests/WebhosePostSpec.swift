@@ -36,12 +36,20 @@ class WebhosePostSpec: QuickSpec {
                     expect(posts?.count).toEventually(equal(2))
                 }
                 it("has an uuid") {
-                    var posts: [WebhosePost]?
+                    var post: WebhosePost?
                     client.search(self.aQuery) { response in
-                        posts = response.posts
+                        post = response.posts.first
                     }
                     let expectedUUID = "7ac79ae99e3e9aa8acce5ce36ae34ed3443fc3d0"
-                    expect(posts?.first?.uuid).toEventually(equal(expectedUUID))
+                    expect(post?.uuid).toEventually(equal(expectedUUID))
+                }
+                it("has an uuid") {
+                    var post: WebhosePost?
+                    client.search(self.aQuery) { response in
+                        post = response.posts.first
+                    }
+                    let expectedURL = "http://omgili.com/r/"
+                    expect(post?.url).toEventually(equal(expectedURL))
                 }
             }
         }
