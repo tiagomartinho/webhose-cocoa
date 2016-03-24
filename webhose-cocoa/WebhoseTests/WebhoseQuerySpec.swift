@@ -36,7 +36,10 @@ class WebhoseQuerySpec: QuickSpec {
                 }
                 it("has none") {
                     let expectedQuery = "-None"
-                    let query = WebhoseQuery()
+                    let builder = WebhoseQueryBuilder { builder in
+                        builder.excludeTerm = "None"
+                    }
+                    let query = WebhoseQuery(builder: builder)
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has language") {

@@ -6,6 +6,9 @@ extension WebhoseQuery: CustomStringConvertible {
         if let exactTerm = exactTerm {
             description += "\"" + exactTerm + "\""
         }
+        if let excludeTerm = excludeTerm {
+            description += "-" + excludeTerm
+        }
         return description
     }
 
