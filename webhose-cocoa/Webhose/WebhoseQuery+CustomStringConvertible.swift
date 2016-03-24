@@ -1,38 +1,28 @@
 extension WebhoseQuery: CustomStringConvertible {
     var description: String {
-
         var description = ""
-
-        if let terms = allTerms {
-            if terms.count > 0 {
-                description += "("
-                for (index, term) in terms.enumerate() {
-                    description += term
-                    if index + 1 != terms.count {
-                        description += " AND "
-                    }
-                }
-                description += ")"
-            }
-        }
-
+        description += concatenate(allTerms, WithSeparator: "AND")
+        description += concatenate(oneOrMoreTerms, WithSeparator: "OR")
         if let exactTerm = exactTerm {
             description += "\"" + exactTerm + "\""
         }
+        return description
+    }
 
-        if let terms = oneOrMoreTerms {
+    private func concatenate(terms: [String]?, WithSeparator separator: String) -> String {
+        var result = ""
+        if let terms = terms {
             if terms.count > 0 {
-                description += "("
+                result += "("
                 for (index, term) in terms.enumerate() {
-                    description += term
+                    result += term
                     if index + 1 != terms.count {
-                        description += " OR "
+                        result += " " + separator + " "
                     }
                 }
-                description += ")"
+                result += ")"
             }
         }
-
-        return description
+        return result
     }
 }
