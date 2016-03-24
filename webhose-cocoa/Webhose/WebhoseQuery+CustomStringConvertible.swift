@@ -16,8 +16,8 @@ extension WebhoseQuery: CustomStringConvertible {
             }
         }
 
-        if let exactWord = exactWord {
-            description += "\"" + exactWord + "\""
+        if let exactTerm = exactTerm {
+            description += "\"" + exactTerm + "\""
         }
 
         return description

@@ -1,6 +1,6 @@
 class WebhoseQueryBuilder {
     var allTerms: [String]?
-    var exactWord: String?
+    var exactTerm: String?
 
     typealias BuilderClosure = (WebhoseQueryBuilder) -> ()
 
@@ -12,6 +12,6 @@ class WebhoseQueryBuilder {
 extension WebhoseQuery {
     init(builder: WebhoseQueryBuilder) {
         self.allTerms = builder.allTerms
-        self.exactWord = builder.exactWord
+        self.exactTerm = builder.exactTerm
     }
 }
