@@ -7,4 +7,5 @@ struct WebhoseQuery {
     var threadTitle: String?
     var threadSectionTitle: String?
     var threadCountry: String?
+    var site: String?
 }

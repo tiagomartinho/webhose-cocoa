@@ -61,8 +61,11 @@ class WebhoseQuerySpec: QuickSpec {
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has site") {
-                    let expectedQuery = "site:website101.com"
-                    let query = WebhoseQuery()
+                    let expectedQuery = "site:website101.com "
+                    let builder = WebhoseQueryBuilder { builder in
+                        builder.site = "website101.com"
+                    }
+                    let query = WebhoseQuery(builder: builder)
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has performance score") {

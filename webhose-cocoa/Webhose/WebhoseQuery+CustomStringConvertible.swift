@@ -21,6 +21,9 @@ extension WebhoseQuery: CustomStringConvertible {
         if let threadCountry = threadCountry {
             description += "thread.country:" + threadCountry + " "
         }
+        if let site = site {
+            description += "site:" + site + " "
+        }
         return description
     }
 
