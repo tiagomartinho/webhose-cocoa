@@ -8,6 +8,7 @@ class WebhoseQueryBuilder {
     var threadSectionTitle: String?
     var threadCountry: String?
     var site: String?
+    var performanceScore: Int?
 
     typealias BuilderClosure = (WebhoseQueryBuilder) -> ()
 
@@ -27,5 +28,6 @@ extension WebhoseQuery {
         self.threadSectionTitle = builder.threadSectionTitle
         self.threadCountry = builder.threadCountry
         self.site = builder.site
+        self.performanceScore = builder.performanceScore
     }
 }

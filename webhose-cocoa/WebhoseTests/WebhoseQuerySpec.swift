@@ -69,8 +69,11 @@ class WebhoseQuerySpec: QuickSpec {
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has performance score") {
-                    let expectedQuery = "performance_score:>3"
-                    let query = WebhoseQuery()
+                    let expectedQuery = "performance_score:>3 "
+                    let builder = WebhoseQueryBuilder { builder in
+                        builder.performanceScore = 3
+                    }
+                    let query = WebhoseQuery(builder: builder)
                     expect("\(query)").to(equal(expectedQuery))
                 }
             }

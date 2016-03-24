@@ -8,4 +8,5 @@ struct WebhoseQuery {
     var threadSectionTitle: String?
     var threadCountry: String?
     var site: String?
+    var performanceScore: Int?
 }

@@ -24,6 +24,9 @@ extension WebhoseQuery: CustomStringConvertible {
         if let site = site {
             description += "site:" + site + " "
         }
+        if let performanceScore = performanceScore {
+            description += "performance_score:>" + "\(performanceScore)" + " "
+        }
         return description
     }
 
