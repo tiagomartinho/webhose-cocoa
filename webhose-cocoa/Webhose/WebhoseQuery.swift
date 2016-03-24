@@ -3,4 +3,5 @@ struct WebhoseQuery {
     var exactTerm: String?
     var oneOrMoreTerms: [String]?
     var excludeTerm: String?
+    var language: String?
 }

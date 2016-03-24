@@ -9,6 +9,9 @@ extension WebhoseQuery: CustomStringConvertible {
         if let excludeTerm = excludeTerm {
             description += "-" + excludeTerm
         }
+        if let language = language {
+            description += "language:(" + language + ")"
+        }
         return description
     }
 

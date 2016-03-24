@@ -44,7 +44,10 @@ class WebhoseQuerySpec: QuickSpec {
                 }
                 it("has language") {
                     let expectedQuery = "language:(portuguese)"
-                    let query = WebhoseQuery()
+                    let builder = WebhoseQueryBuilder { builder in
+                        builder.language = "portuguese"
+                    }
+                    let query = WebhoseQuery(builder: builder)
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has thread information") {

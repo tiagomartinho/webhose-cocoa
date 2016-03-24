@@ -3,6 +3,7 @@ class WebhoseQueryBuilder {
     var exactTerm: String?
     var oneOrMoreTerms: [String]?
     var excludeTerm: String?
+    var language: String?
 
     typealias BuilderClosure = (WebhoseQueryBuilder) -> ()
 
@@ -17,5 +18,6 @@ extension WebhoseQuery {
         self.exactTerm = builder.exactTerm
         self.oneOrMoreTerms = builder.oneOrMoreTerms
         self.excludeTerm = builder.excludeTerm
+        self.language = builder.language
     }
 }
