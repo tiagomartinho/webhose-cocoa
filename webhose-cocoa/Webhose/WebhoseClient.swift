@@ -1,5 +1,6 @@
+typealias WebhoseResponseCallback = (WebhoseResponse) -> Void
+
 class WebhoseClient {
-    typealias WebhoseResponseCallback = (WebhoseResponse) -> Void
 
     let key: String
     let service: Service
