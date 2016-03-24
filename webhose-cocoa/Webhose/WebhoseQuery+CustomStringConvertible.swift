@@ -1,6 +1,8 @@
 extension WebhoseQuery: CustomStringConvertible {
     var description: String {
+
         var description = ""
+
         if let terms = allTerms {
             if terms.count > 0 {
                 description += "("
@@ -13,6 +15,11 @@ extension WebhoseQuery: CustomStringConvertible {
                 description += ")"
             }
         }
+
+        if let exactWord = exactWord {
+            description += "\"" + exactWord + "\""
+        }
+
         return description
     }
 }

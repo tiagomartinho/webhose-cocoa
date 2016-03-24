@@ -20,7 +20,10 @@ class WebhoseQuerySpec: QuickSpec {
                 }
                 it("has exact word") {
                     let expectedQuery = "\"ExactWord\""
-                    let query = WebhoseQuery()
+                    let builder = WebhoseQueryBuilder { builder in
+                        builder.exactWord = "ExactWord"
+                    }
+                    let query = WebhoseQuery(builder: builder)
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has one or more words") {
