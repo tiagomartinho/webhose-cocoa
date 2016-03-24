@@ -29,6 +29,7 @@ class WebhoseQuerySpec: QuickSpec {
                 it("has one or more words") {
                     let expectedQuery = "(One OR More OR Words)"
                     let builder = WebhoseQueryBuilder { builder in
+                        builder.oneOrMoreTerms = ["One", "More", "Words"]
                     }
                     let query = WebhoseQuery(builder: builder)
                     expect("\(query)").to(equal(expectedQuery))

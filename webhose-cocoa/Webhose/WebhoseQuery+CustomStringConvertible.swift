@@ -20,6 +20,19 @@ extension WebhoseQuery: CustomStringConvertible {
             description += "\"" + exactTerm + "\""
         }
 
+        if let terms = oneOrMoreTerms {
+            if terms.count > 0 {
+                description += "("
+                for (index, term) in terms.enumerate() {
+                    description += term
+                    if index + 1 != terms.count {
+                        description += " OR "
+                    }
+                }
+                description += ")"
+            }
+        }
+
         return description
     }
 }
