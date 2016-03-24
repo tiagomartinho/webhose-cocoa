@@ -4,6 +4,9 @@ class WebhoseQueryBuilder {
     var oneOrMoreTerms: [String]?
     var excludeTerm: String?
     var language: String?
+    var threadTitle: String?
+    var threadSectionTitle: String?
+    var threadCountry: String?
 
     typealias BuilderClosure = (WebhoseQueryBuilder) -> ()
 
@@ -19,5 +22,8 @@ extension WebhoseQuery {
         self.oneOrMoreTerms = builder.oneOrMoreTerms
         self.excludeTerm = builder.excludeTerm
         self.language = builder.language
+        self.threadTitle = builder.threadTitle
+        self.threadSectionTitle = builder.threadSectionTitle
+        self.threadCountry = builder.threadCountry
     }
 }

@@ -4,13 +4,22 @@ extension WebhoseQuery: CustomStringConvertible {
         description += concatenate(allTerms, WithSeparator: "AND")
         description += concatenate(oneOrMoreTerms, WithSeparator: "OR")
         if let exactTerm = exactTerm {
-            description += "\"" + exactTerm + "\""
+            description += "\"" + exactTerm + "\" "
         }
         if let excludeTerm = excludeTerm {
-            description += "-" + excludeTerm
+            description += "-" + excludeTerm + " "
         }
         if let language = language {
-            description += "language:(" + language + ")"
+            description += "language:(" + language + ") "
+        }
+        if let threadTitle = threadTitle {
+            description += "thread.title:(" + threadTitle + ") "
+        }
+        if let threadSectionTitle = threadSectionTitle {
+            description += "thread.section_title:(" + threadSectionTitle + ") "
+        }
+        if let threadCountry = threadCountry {
+            description += "thread.country:" + threadCountry + " "
         }
         return description
     }
@@ -26,7 +35,7 @@ extension WebhoseQuery: CustomStringConvertible {
                         result += " " + separator + " "
                     }
                 }
-                result += ")"
+                result += ") "
             }
         }
         return result

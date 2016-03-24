@@ -11,7 +11,7 @@ class WebhoseQuerySpec: QuickSpec {
         describe("the Webhose Query") {
             context("when the query is built") {
                 it("has all these words") {
-                    let expectedQuery = "(All AND These AND Words)"
+                    let expectedQuery = "(All AND These AND Words) "
                     let builder = WebhoseQueryBuilder { builder in
                         builder.allTerms = ["All", "These", "Words"]
                     }
@@ -19,7 +19,7 @@ class WebhoseQuerySpec: QuickSpec {
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has exact word") {
-                    let expectedQuery = "\"ExactWord\""
+                    let expectedQuery = "\"ExactWord\" "
                     let builder = WebhoseQueryBuilder { builder in
                         builder.exactTerm = "ExactWord"
                     }
@@ -27,7 +27,7 @@ class WebhoseQuerySpec: QuickSpec {
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has one or more words") {
-                    let expectedQuery = "(One OR More OR Words)"
+                    let expectedQuery = "(One OR More OR Words) "
                     let builder = WebhoseQueryBuilder { builder in
                         builder.oneOrMoreTerms = ["One", "More", "Words"]
                     }
@@ -35,7 +35,7 @@ class WebhoseQuerySpec: QuickSpec {
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has none") {
-                    let expectedQuery = "-None"
+                    let expectedQuery = "-None "
                     let builder = WebhoseQueryBuilder { builder in
                         builder.excludeTerm = "None"
                     }
@@ -43,7 +43,7 @@ class WebhoseQuerySpec: QuickSpec {
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has language") {
-                    let expectedQuery = "language:(portuguese)"
+                    let expectedQuery = "language:(portuguese) "
                     let builder = WebhoseQueryBuilder { builder in
                         builder.language = "portuguese"
                     }
@@ -51,8 +51,13 @@ class WebhoseQuerySpec: QuickSpec {
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has thread information") {
-                    let expectedQuery = "thread.title:(T) thread.section_title:(T) thread.country:P"
-                    let query = WebhoseQuery()
+                    let expectedQuery = "thread.title:(T) thread.section_title:(T) thread.country:P "
+                    let builder = WebhoseQueryBuilder { builder in
+                        builder.threadTitle = "T"
+                        builder.threadSectionTitle = "T"
+                        builder.threadCountry = "P"
+                    }
+                    let query = WebhoseQuery(builder: builder)
                     expect("\(query)").to(equal(expectedQuery))
                 }
                 it("has site") {
