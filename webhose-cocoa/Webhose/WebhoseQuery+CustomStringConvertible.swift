@@ -1,5 +1,5 @@
 extension WebhoseQuery: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         var description = ""
         description += concatenate(allTerms, WithSeparator: "AND")
         description += concatenate(oneOrMoreTerms, WithSeparator: "OR")

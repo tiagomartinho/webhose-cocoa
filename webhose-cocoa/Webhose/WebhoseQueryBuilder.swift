@@ -1,24 +1,24 @@
-class WebhoseQueryBuilder {
-    var allTerms: [String]?
-    var exactTerm: String?
-    var oneOrMoreTerms: [String]?
-    var excludeTerm: String?
-    var language: String?
-    var threadTitle: String?
-    var threadSectionTitle: String?
-    var threadCountry: String?
-    var site: String?
-    var performanceScore: Int?
+public class WebhoseQueryBuilder {
+    public var allTerms: [String]?
+    public var exactTerm: String?
+    public var oneOrMoreTerms: [String]?
+    public var excludeTerm: String?
+    public var language: String?
+    public var threadTitle: String?
+    public var threadSectionTitle: String?
+    public var threadCountry: String?
+    public var site: String?
+    public var performanceScore: Int?
 
-    typealias BuilderClosure = (WebhoseQueryBuilder) -> ()
+    public typealias BuilderClosure = (WebhoseQueryBuilder) -> ()
 
-    init(buildClosure: BuilderClosure) {
+    public init(buildClosure: BuilderClosure) {
         buildClosure(self)
     }
 }
 
-extension WebhoseQuery {
-    init(builder: WebhoseQueryBuilder) {
+public extension WebhoseQuery {
+    public init(builder: WebhoseQueryBuilder) {
         self.allTerms = builder.allTerms
         self.exactTerm = builder.exactTerm
         self.oneOrMoreTerms = builder.oneOrMoreTerms

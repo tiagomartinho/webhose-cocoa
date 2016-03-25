@@ -1,3 +1,5 @@
+import Foundation
+
 extension NSDate {
     static func dateFromString(date: String) -> NSDate {
         let formatter = NSDateFormatter()

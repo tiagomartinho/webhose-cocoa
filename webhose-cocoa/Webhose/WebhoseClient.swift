@@ -1,26 +1,26 @@
-typealias WebhoseResponseCallback = (WebhoseResponse) -> Void
-
-class WebhoseClient {
+public class WebhoseClient {
 
     let key: String
     let service: Service
 
-    init(key: String) {
+    public typealias WebhoseResponseCallback = (WebhoseResponse) -> Void
+
+    public init(key: String) {
         self.key = key
         self.service = AlamofireService()
     }
 
-    func search(query: WebhoseQuery, callback: WebhoseResponseCallback) {
+    public func search(query: WebhoseQuery, callback: WebhoseResponseCallback) {
         let endpoint = WebhoseEndpoint.buildWithKey(key, AndQuery: query)
         service(endpoint, callback: callback)
     }
 
-    func search(query: String, callback: WebhoseResponseCallback) {
+    public func search(query: String, callback: WebhoseResponseCallback) {
         let endpoint = WebhoseEndpoint.buildWithKey(key, AndQuery: query)
         service(endpoint, callback: callback)
     }
 
-    func more(response: WebhoseResponse, callback: WebhoseResponseCallback) {
+    public func more(response: WebhoseResponse, callback: WebhoseResponseCallback) {
         let endpoint = response.next
         service(endpoint, callback: callback)
     }

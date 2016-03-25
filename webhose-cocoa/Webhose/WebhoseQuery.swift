@@ -1,12 +1,12 @@
-struct WebhoseQuery {
-    var allTerms: [String]?
-    var exactTerm: String?
-    var oneOrMoreTerms: [String]?
-    var excludeTerm: String?
-    var language: String?
-    var threadTitle: String?
-    var threadSectionTitle: String?
-    var threadCountry: String?
-    var site: String?
-    var performanceScore: Int?
+public struct WebhoseQuery {
+    public let allTerms: [String]?
+    public let exactTerm: String?
+    public let oneOrMoreTerms: [String]?
+    public let excludeTerm: String?
+    public let language: String?
+    public let threadTitle: String?
+    public let threadSectionTitle: String?
+    public let threadCountry: String?
+    public let site: String?
+    public let performanceScore: Int?
 }

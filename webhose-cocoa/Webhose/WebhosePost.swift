@@ -1,18 +1,20 @@
-struct WebhosePost {
-    let uuid: String
-    let url: NSURL
-    let published: NSDate
-    let title: String
-    let orderInThread: Int
-    let author: String
-    let text: String
-    let highlightText: String
-    let highlightTitle: String
-    let language: String
-    let externalLinks: [String]
-    let persons: [String]
-    let locations: [String]
-    let organizations: [String]
-    let crawled: NSDate
-    let thread: WebhoseThread
+import Foundation
+
+public struct WebhosePost {
+    public let uuid: String
+    public let url: NSURL
+    public let published: NSDate
+    public let title: String
+    public let orderInThread: Int
+    public let author: String
+    public let text: String
+    public let highlightText: String
+    public let highlightTitle: String
+    public let language: String
+    public let externalLinks: [String]
+    public let persons: [String]
+    public let locations: [String]
+    public let organizations: [String]
+    public let crawled: NSDate
+    public let thread: WebhoseThread
 }
