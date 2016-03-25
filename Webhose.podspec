@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.ios.deployment_target = '8.0'
 
-  s.source_files = "webhose-cocoa/**/*.{swift}"
+  s.source_files = "webhose-cocoa/Webhose/*.{swift}"
 
   s.dependency 'Alamofire', '~> 3.0'
   s.dependency 'SwiftyJSON', '~> 2.3.2'
