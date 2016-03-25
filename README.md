@@ -67,9 +67,33 @@ client.search("foobar") { response in
 }
 ```
 
+You can use the query builder to build advanced queries.
+
+```swift
+let builder = WebhoseQueryBuilder { builder in
+    builder.allTerms = ["All", "These", "Words"]
+    builder.exactTerm = "ExactWord"
+    builder.oneOrMoreTerms = ["One", "More", "Words"]
+    builder.excludeTerm = "None"
+    builder.language = "portuguese"
+    builder.site = "website.com"
+    builder.performanceScore = 3
+}
+
+let query = WebhoseQuery(builder: builder)
+
+client.search(query) { response in
+  print(response)
+}
+```
+
 ## Full documentation
 
-### WebhoseClient class
+### Webhose Tests
+
+For detail use of how to use the SDK read the tests WebhoseReponseSpec, WebhosePostSpec, WebhoseThreadSpec and WebhoseQuerySpec.
+
+### Client class
 
 * WebhoseClient(key)
 
@@ -79,7 +103,7 @@ client.search("foobar") { response in
 
   * query - the search query, either as a search string, or as a Query object
 
-### WebhoseQuery class
+### Query class
 
 WebhoseQuery objects correspond to the advanced search options that appear on https://webhose.io/use
 
@@ -93,7 +117,7 @@ WebhoseQuery objects have the following members:
 * ``site`` - one or more of site names, top level only (i.e., yahoo.com and not news.yahoo.com)
 * ``title`` - terms that must appear in the title
 
-### WebhoseResponse class
+### Response class
 
 Response objects have the following members:
 
@@ -103,7 +127,7 @@ Response objects have the following members:
 * ``next`` - a URL for the next results page for this search
 * ``requestsLeft`` - the number of requests still available
 
-### WebhosePost and WebhoseThread classes
+### Post and Thread classes
 
 WebhosePost and WebhoseThread object contain the actual data returned from the
 API. Consult https://webhose.io/documentation to find out about their structure.
