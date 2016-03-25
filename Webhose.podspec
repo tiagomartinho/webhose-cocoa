@@ -10,4 +10,6 @@ Pod::Spec.new do |s|
   s.homepage = "https://bitbucket.org/tiagomartinho/webhose-cocoa"
   s.source = { :git => "https://bitbucket.org/tiagomartinho/webhose-cocoa.git", :tag => "#{s.version}"}
   s.source_files = "webhose-cocoa/**/*.{swift}"
+  s.dependency 'Alamofire', '~> 3.0'
+  s.dependency 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end
