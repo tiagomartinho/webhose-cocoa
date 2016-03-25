@@ -56,7 +56,7 @@ client.search("foobar") { response in
 }
 ```
 
-If there are more than one page of results, use the `getMore()` method to
+If there are more than one page of results, use the `more()` method to
 fetch the next page.
 
 ```swift
