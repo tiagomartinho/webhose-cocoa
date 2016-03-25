@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/tiagomartinho/webhose-cocoa.git", :tag => "#{s.version}"}
 
   s.requires_arc = true
-  s.platform = :ios
   s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '9.0'
 
   s.source_files = "webhose-cocoa/Webhose/*.{swift}"
 
