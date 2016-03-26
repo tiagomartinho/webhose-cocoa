@@ -67,6 +67,26 @@ client.search("foobar") { response in
 }
 ```
 
+Instead of receiving the results in a closure you can adopt the WebhoseClientDelegate protocol, and receive the updates with the callback didEndSearchWithResponse.
+
+```swift
+import UIKit
+
+class ViewController: UIViewController, WebhoseClientDelegate {
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    let client = WebhoseClient(key: "YOUR_API_KEY")
+    client.delegate = self
+    client.search("foobar")
+}
+
+func didEndSearchWithResponse(response: WebhoseResponse) {
+
+}
+```
+
 You can use the query builder to build advanced queries.
 
 ```swift
