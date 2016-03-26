@@ -1,10 +1,11 @@
 public class WebhoseClient {
 
-    let key: String
-    let service: Service
-    var delegate: WebhoseClientDelegate?
+    public var delegate: WebhoseClientDelegate?
 
     public typealias WebhoseResponseCallback = (WebhoseResponse) -> Void
+
+    let key: String
+    let service: Service
 
     public init(key: String) {
         self.key = key
