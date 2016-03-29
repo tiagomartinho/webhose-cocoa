@@ -30,6 +30,9 @@ extension WebhoseQuery: CustomStringConvertible {
         if let performanceScore = performanceScore {
             description += "performance_score:>" + "\(performanceScore)" + " "
         }
+        if let timestamp = timestamp {
+            description += "&ts=" + "\(timestamp)"
+        }
         return description
     }
 
