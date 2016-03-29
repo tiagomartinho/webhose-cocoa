@@ -10,7 +10,7 @@ public class WebhoseQueryBuilder {
     public var site: String?
     public var siteType: SiteType?
     public var performanceScore: Int?
-    public var timestamp: Double?
+    public var timestamp: Int?
 
     public typealias BuilderClosure = (WebhoseQueryBuilder) -> ()
 
