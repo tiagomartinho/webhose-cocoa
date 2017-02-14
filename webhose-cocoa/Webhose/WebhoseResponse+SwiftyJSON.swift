@@ -1,8 +1,7 @@
 import SwiftyJSON
 
 extension WebhoseResponse {
-    init(data: NSData?) {
-        let data = data ?? NSData()
+    init(data: Data) {
         let json = JSON(data: data)
         self.init(json: json)
     }
@@ -12,6 +11,6 @@ extension WebhoseResponse {
         self.next = json["next"].string ?? ""
         self.requestsLeft = json["requestsLeft"].int ?? 0
         self.moreResultsAvailable = json["moreResultsAvailable"].int ?? 0
-        self.posts = WebhosePost.collection(json["posts"]) ?? [WebhosePost]()
+        self.posts = WebhosePost.collection(json["posts"])
     }
 }

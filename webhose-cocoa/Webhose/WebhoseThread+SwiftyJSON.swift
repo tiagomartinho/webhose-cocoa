@@ -3,8 +3,8 @@ import SwiftyJSON
 extension WebhoseThread {
     init(json: JSON) {
         self.uuid = json["uuid"].stringValue
-        self.url = NSURL(string: json["url"].stringValue) ?? NSURL()
-        self.published = NSDate.dateFromString(json["published"].stringValue)
+        self.url = URL(string: json["url"].stringValue)!
+        self.published = Date.dateFromString(json["published"].stringValue)
         self.title = json["title"].stringValue
         self.titleFull = json["title_full"].stringValue
         self.sectionTitle = json["section_title"].stringValue

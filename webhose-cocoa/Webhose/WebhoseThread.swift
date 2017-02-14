@@ -2,8 +2,8 @@ import Foundation
 
 public struct WebhoseThread {
     public let uuid: String
-    public let url: NSURL
-    public let published: NSDate
+    public let url: URL
+    public let published: Date
     public let title: String
     public let titleFull: String
     public let sectionTitle: String

@@ -1,6 +1,6 @@
-public class WebhoseClient {
+open class WebhoseClient {
 
-    public var delegate: WebhoseClientDelegate?
+    open weak var delegate: WebhoseClientDelegate?
 
     public typealias WebhoseResponseCallback = (WebhoseResponse) -> Void
 
@@ -12,23 +12,24 @@ public class WebhoseClient {
         self.service = AlamofireService()
     }
 
-    public func search(query: WebhoseQuery, callback: WebhoseResponseCallback? = nil) {
+    open func search(_ query: WebhoseQuery, callback: WebhoseResponseCallback? = nil) {
         let endpoint = WebhoseEndpoint.buildWithKey(key, AndQuery: query)
         service(endpoint, callback: callback)
     }
 
-    public func search(query: String, callback: WebhoseResponseCallback? = nil) {
+    open func search(_ query: String, callback: WebhoseResponseCallback? = nil) {
         let endpoint = WebhoseEndpoint.buildWithKey(key, AndQuery: query)
         service(endpoint, callback: callback)
     }
 
-    public func more(response: WebhoseResponse, callback: WebhoseResponseCallback? = nil) {
+    open func more(_ response: WebhoseResponse, callback: WebhoseResponseCallback? = nil) {
         let endpoint = response.next
         service(endpoint, callback: callback)
     }
 
-    private func service(endpoint: String, callback: WebhoseResponseCallback?) {
+    fileprivate func service(_ endpoint: String, callback: WebhoseResponseCallback?) {
         service.get(endpoint) { [unowned self] data in
+            guard let data = data else { return }
             let response = WebhoseResponse(data: data)
             self.delegate?.didEndSearchWithResponse(response)
             if let callback = callback {

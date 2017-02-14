@@ -1,9 +1,9 @@
 import Foundation
 
-extension NSDate {
-    static func dateFromString(date: String) -> NSDate {
-        let formatter = NSDateFormatter()
+extension Date {
+    static func dateFromString(_ date: String) -> Date {
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        return formatter.dateFromString(date) ?? NSDate()
+        return formatter.date(from: date) ?? Date()
     }
 }

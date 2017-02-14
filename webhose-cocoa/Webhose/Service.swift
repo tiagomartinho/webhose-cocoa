@@ -1,5 +1,5 @@
 import Foundation
 
 protocol Service {
-    func get(url: String, callback: NSData? -> Void)
+    func get(_ url: String, callback: @escaping (Data?) -> Void)
 }

@@ -1,8 +1,9 @@
 import Alamofire
 
 class AlamofireService: Service {
-    func get(url: String, callback: NSData? -> Void) {
-        Alamofire.request(.GET, url)
+
+    func get(_ url: String, callback: @escaping (Data?) -> Void) {
+        Alamofire.request(url, method: .get)
             .validate()
             .responseJSON { callback($0.data) }
     }

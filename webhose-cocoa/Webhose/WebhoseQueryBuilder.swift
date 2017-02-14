@@ -1,18 +1,18 @@
-public class WebhoseQueryBuilder {
-    public var allTerms: [String]?
-    public var exactTerm: String?
-    public var oneOrMoreTerms: [String]?
-    public var excludeTerm: String?
-    public var language: String?
-    public var threadTitle: String?
-    public var threadSectionTitle: String?
-    public var threadCountry: String?
-    public var site: String?
-    public var siteType: SiteType?
-    public var performanceScore: Int?
-    public var timestamp: Int?
+open class WebhoseQueryBuilder {
+    open var allTerms: [String]?
+    open var exactTerm: String?
+    open var oneOrMoreTerms: [String]?
+    open var excludeTerm: String?
+    open var language: String?
+    open var threadTitle: String?
+    open var threadSectionTitle: String?
+    open var threadCountry: String?
+    open var site: String?
+    open var siteType: SiteType?
+    open var performanceScore: Int?
+    open var timestamp: Int?
 
-    public typealias BuilderClosure = (WebhoseQueryBuilder) -> ()
+    public typealias BuilderClosure = (WebhoseQueryBuilder) -> Void
 
     public init(buildClosure: BuilderClosure) {
         buildClosure(self)

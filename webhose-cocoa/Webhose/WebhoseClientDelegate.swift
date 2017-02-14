@@ -1,3 +1,3 @@
-public protocol WebhoseClientDelegate {
-    func didEndSearchWithResponse(response: WebhoseResponse)
+public protocol WebhoseClientDelegate: class {
+    func didEndSearchWithResponse(_ response: WebhoseResponse)
 }

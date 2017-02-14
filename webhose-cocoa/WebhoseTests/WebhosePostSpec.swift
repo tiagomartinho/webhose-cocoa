@@ -48,7 +48,7 @@ class WebhosePostSpec: QuickSpec {
                     client.search(self.aQuery) { response in
                         post = response.posts.first
                     }
-                    let expectedURL = NSURL(string: "http://omgili.com/r/")!
+                    let expectedURL = URL(string: "http://omgili.com/r/")!
                     expect(post?.url).toEventually(equal(expectedURL))
                 }
                 it("has a publication date") {
@@ -63,16 +63,16 @@ class WebhosePostSpec: QuickSpec {
         }
     }
 
-    static func buildExpectedDate() -> NSDate {
-        let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
-        let components = NSDateComponents()
+    static func buildExpectedDate() -> Date {
+        let calendar = NSCalendar(identifier: .gregorian)
+        var components = DateComponents()
         components.year = 2016
         components.month = 3
         components.day = 18
         components.hour = 19
         components.minute = 31
         components.second = 0
-        components.timeZone = NSTimeZone(forSecondsFromGMT: 0)
-        return calendar!.dateFromComponents(components)!
+        components.timeZone = TimeZone(secondsFromGMT: 0)
+        return calendar!.date(from: components)!
     }
 }
