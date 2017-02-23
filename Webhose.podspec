@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "Webhose"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.summary = "A simple way to access the webhose.io API"
 
@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
 
   s.source_files = "webhose-cocoa/Webhose/*.{swift}"
 
-  s.dependency 'Alamofire', '~> 3.0'
-  s.dependency 'SwiftyJSON', '~> 2.3.2'
+  s.dependency 'Alamofire', '~> 4.3.0'
+  s.dependency 'SwiftyJSON', '~> 3.1.4'
 end
